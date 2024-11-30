@@ -1,6 +1,7 @@
 import 'package:dart_admin_auth_sample_app/shared/shared.dart';
 import 'package:dart_admin_auth_sample_app/utils/extensions.dart';
 import 'package:flutter/material.dart';
+import 'package:bot_toast/bot_toast.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -44,7 +45,9 @@ class HomeScreen extends StatelessWidget {
             ),
             10.vSpace,
             ActionTile(
-              onTap: () {},
+              onTap: () {
+                BotToast.showText(text: "Successfully signed out!");
+              },
               title: "Sign Out",
             ),
             10.vSpace,

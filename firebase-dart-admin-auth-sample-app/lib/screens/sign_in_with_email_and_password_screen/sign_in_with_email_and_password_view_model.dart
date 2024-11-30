@@ -16,7 +16,8 @@ class SignInWithEmailAndPasswordViewModel extends ChangeNotifier {
 
       await FirebaseApp.firebaseAuth
           ?.signInWithEmailAndPassword(email, password);
-
+      // Add toast message
+      BotToast.showText(text: "Successfully signed In!");
       onSuccess();
     } catch (e) {
       BotToast.showText(text: e.toString());

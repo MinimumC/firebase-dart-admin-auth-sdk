@@ -21,6 +21,8 @@ class SignUpViewModel extends ChangeNotifier {
           ?.createUserWithEmailAndPassword(email, password);
 
       BotToast.showText(text: '${user?.user.email} just signed in');
+            // Add toast message
+      BotToast.showText(text: "Successfully signed In!");
       onSuccess();
     } catch (e) {
       BotToast.showText(text: e.toString());
