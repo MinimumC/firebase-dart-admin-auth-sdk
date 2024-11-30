@@ -1,3 +1,4 @@
+import 'package:dart_admin_auth_sample_app/screens/update_profile_screen/update_profile_screen.dart';
 import 'package:dart_admin_auth_sample_app/shared/shared.dart';
 import 'package:dart_admin_auth_sample_app/utils/extensions.dart';
 import 'package:flutter/material.dart';
@@ -25,7 +26,12 @@ class HomeScreen extends StatelessWidget {
             ),
             10.vSpace,
             ActionTile(
-              onTap: () {},
+              onTap: () {
+              Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const UpdateProfileScreen()),
+            );
+              },
               title: "Update Profile",
             ),
             10.vSpace,
